@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Game | Play-to-Earn Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+            background-color: #121212;
+        }
+        
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        header {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(40, 40, 40, 0.9) 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255, 138, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            color: #aaaaaa;
+            margin-top: 15px;
+            font-weight: 300;
+        }
+        
+        .about-section {
+            background: rgba(30, 30, 30, 0.85);
+            border-radius: 15px;
+            padding: 50px;
+            margin: 60px 0;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            color: #ff8a00;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+        }
+        
+        p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #dddddd;
+            margin-bottom: 25px;
+        }
+        
+        .highlight {
+            color: #ff8a00;
+            font-weight: 600;
+        }
+        
+        .game-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .feature {
+            background: rgba(40, 40, 40, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 3px solid #e52e71;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature h3 {
+            color: #ffffff;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff8a00;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(40, 40, 40, 0.9) 100%);
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 80px;
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255, 138, 0, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-section {
+                padding: 30px;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header>
+        <div class="container">
+            <h1>About Our Game</h1>
+            <div class="tagline">Where Gaming Meets Real-World Value</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="about-section">
+            <h2>Our Vision</h2>
+            <p>Welcome to <span class="highlight">[Your Game Name]</span>, a revolutionary Play-to-Earn experience that transforms gaming from just entertainment into a rewarding economic opportunity. We've built a vibrant digital ecosystem where your skills, strategy, and dedication translate into real-world value through blockchain technology.</p>
+            
+            <p>Our game combines <span class="highlight">immersive gameplay</span> with <span class="highlight">decentralized finance</span> principles, creating a unique environment where players truly own their in-game assets as NFTs and earn cryptocurrency rewards. Unlike traditional games where your progress is locked within a single platform, our ecosystem gives you complete ownership and control over your digital possessions.</p>
+            
+            <h2>The Game Experience</h2>
+            <p>At its core, <span class="highlight">[Your Game Name]</span> is a [describe genre - e.g., "fantasy RPG, racing simulator, strategy game"] that challenges players to [describe key gameplay activities]. What sets us apart is our innovative economic model that rewards players at every level:</p>
+            
+            <div class="game-features">
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Earn As You Play</h3>
+                    <p>Complete quests, win battles, and achieve milestones to earn our native cryptocurrency that has real market value.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-chess-queen"></i></div>
+                    <h3>True Ownership</h3>
+                    <p>All rare items, characters, and land are minted as NFTs that you truly own and can trade freely.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Player-Driven Economy</h3>
+                    <p>Our marketplace allows players to buy, sell, and trade assets, creating a vibrant in-game economy.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Secure Blockchain</h3>
+                    <p>Built on [Blockchain Name] for fast, low-cost transactions with military-grade security.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Cross-Game Utility</h3>
+                    <p>Your assets maintain value across multiple games in our growing ecosystem.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-vote-yea"></i></div>
+                    <h3>Community Governance</h3>
+                    <p>Token holders help shape the game's future through decentralized proposals and voting.</p>
+                </div>
+            </div>
+            
+            <h2>Why We're Different</h2>
+            <p>Traditional games extract value from players through microtransactions with nothing to show for your investment. <span class="highlight">[Your Game Name]</span> flips this model by putting the economic power in players' hands. Our sustainable tokenomics ensure that early adopters are rewarded while maintaining long-term viability for new players.</p>
+            
+            <p>We've eliminated pay-to-win mechanics in favor of <span class="highlight">skill-to-earn</span> and <span class="highlight">play-to-own</span> systems. Whether you're a competitive esports enthusiast, a casual gamer, or a digital collector, there's a place for you in our ecosystem.</p>
+            
+            <p>Join us in pioneering the future of gaming where entertainment and economic opportunity converge. The virtual world you love playing in can now love you back.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 [Your Game Name]. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Load particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 60,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.4,
+                        "random": true
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 120,
+                        "color": "#e52e71",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1.2,
+                        "direction": "none",
+                        "random": true,
+                        "out_mode": "out"
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

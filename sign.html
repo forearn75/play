@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Play-to-Earn Platform</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* Cool blue gradient */
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: -1;
+    }
+
+    .nav-container {
+      width: 100%;
+      background-color: rgba(20, 40, 60, 0.8);
+      backdrop-filter: blur(6px);
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nav-button {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid #00bcd4;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav-button:hover,
+    .nav-button.active {
+      background: #00bcd4;
+      color: #0d1a26;
+    }
+
+    .auth-container {
+      width: 100%;
+      max-width: 450px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin: 120px 0 60px;
+      text-align: center;
+    }
+
+    .auth-title {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .auth-subtitle {
+      color: #cfd8dc;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #e0f7fa;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #80deea;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #4dd0e1;
+      box-shadow: 0 0 0 3px rgba(77, 208, 225, 0.3);
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: linear-gradient(90deg, #00bcd4, #00acc1);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      box-shadow: 0 4px 12px rgba(0, 172, 193, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 172, 193, 0.5);
+    }
+
+    .auth-footer {
+      margin-top: 25px;
+      color: #e0f2f1;
+    }
+
+    .auth-link {
+      color: #4dd0e1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .auth-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: auto;
+      width: 100%;
+      background-color: rgba(20, 40, 60, 0.8);
+      padding: 20px 0;
+      text-align: center;
+      color: #cfd8dc;
+    }
+
+    @media (max-width: 768px) {
+      .auth-container {
+        padding: 30px 20px;
+        margin: 100px 20px 40px;
+      }
+
+      .auth-title {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        padding: 10px 15px;
+        gap: 10px;
+      }
+
+      .nav-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="nav-container">
+    <nav>
+      <a href="home.html" class="nav-button">Home</a>
+      <a href="signup.html" class="nav-button active">Sign Up</a>
+      <a href="login.html" class="nav-button">Login</a>
+    </nav>
+  </div>
+
+  <div class="auth-container">
+    <h1 class="auth-title">Create Account</h1>
+    <p class="auth-subtitle">Join our play-to-earn community today</p>
+
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter your username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Create a password" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Sign Up</button>
+    </form>
+
+    <div class="auth-footer">
+      Already have an account? <a href="login.html" class="auth-link">Log in</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Play-to-Earn Platform. All rights reserved.
+  </footer>
+
+  <!-- Load particles.js library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 60,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#80deea"
+          },
+          "shape": {
+            "type": "circle"
+          },
+          "opacity": {
+            "value": 0.3
+          },
+          "size": {
+            "value": 4,
+            "random": true
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#4dd0e1",
+            "opacity": 0.3,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "out_mode": "out"
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 0.3
+              }
+            },
+            "push": {
+              "particles_nb": 4
+            }
+          }
+        },
+        "retina_detect": true
+      });
+
+      // Form submission
+      document.getElementById('signupForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Account created successfully! Redirecting to login...');
+        // window.location.href = 'login.html';
+      });
+    });
+  </script>
+</body>
+</html>
